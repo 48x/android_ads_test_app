@@ -34,6 +34,7 @@
 }
 .param-value {
     width: 25%;
+    float: right;
 }
 
 .param-value > textarea, .param-value > input {
