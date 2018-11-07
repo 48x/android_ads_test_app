@@ -29,12 +29,11 @@
 
 .param-name {
     float: left;
-    width: 28%;
+    width: 25%;
     clear:both;
 }
 .param-value {
-    float: right;
-    width: 70%;
+    width: 25%;
 }
 
 .param-value > textarea, .param-value > input {
