@@ -9,13 +9,10 @@
 
 .main-params {
     float: left;
-    width: 42.5%;
 }
 
 .additional-params {
     float: right;
-    width: 42.5%;
-    margin-left: 2.5%;
 }
 
 .param-boolean {
