@@ -11,7 +11,7 @@ function isAdsEnabled() {
 }
 
 function requestAds() {
-    result = OKApp.requestAds(document.getElementById("request-ads-callback").value.trim());
+    result = OKApp.requestAds("callbackForAds");
     document.getElementById("chatlog").textContent += getCurrentTime() + " [requestAds] " + "[" + result + "]\n";
     if (isAlertEnabled()) {
         alert("[requestAds] " + "[" + result + "]")
