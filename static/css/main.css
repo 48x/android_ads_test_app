@@ -21,7 +21,6 @@
 .param-boolean {
     padding-bottom: 20px;
     clear: both;
-    margin-left: -45px;
 }
 
 .param {
@@ -64,6 +63,6 @@
 }
 
 .param > textarea {
-    min-width: 700px;
+    width: 95%;
     margin: auto;
 }
