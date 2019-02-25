@@ -65,8 +65,9 @@
 
 .warning {
     text-align: center;
-    background-color: red;
+    background-color: #d8444470;
     border-radius: 5px;
+    padding: 7px;
 }
 
 .section-title {
