@@ -62,3 +62,13 @@
 .param > textarea {
     width: 250%;
 }
+
+.warning {
+    text-align: center
+    background-color: red;
+    border-radius: 5px;
+}
+
+.section-title {
+    border-bottom: 1px solid black;
+}
