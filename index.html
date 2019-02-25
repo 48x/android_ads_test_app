@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="static/css/main.css"/>
         <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function () {
-                if (FAPI && OKSDK.Util.isLaunchedFromOKApp()) {
+                if (FAPI && FAPI.UI.requestNativeAd && FAPI.UI.isNativeAdSupported && OKSDK.Util.isLaunchedFromOKApp()) {
                    window.API_callback = function() {
                        console.log(arguments);
                        document.getElementById("log").textContent += getCurrentTime() +  " [WEB] " + JSON.stringify(arguments); + "\n";
