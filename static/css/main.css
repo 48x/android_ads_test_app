@@ -64,7 +64,7 @@
 }
 
 .warning {
-    text-align: center
+    text-align: center;
     background-color: red;
     border-radius: 5px;
 }
