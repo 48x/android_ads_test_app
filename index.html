@@ -6,8 +6,21 @@
         <title>Тестовое приложение для рекламы в AndroidApp</title>
         <script content="text/javascript" src="static/js/main.js"></script>
         <link rel="stylesheet" type="text/css" href="static/css/main.css"/>
-    </head>
+        <script type="text/javascript">
+            // Start our processing when the page is loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                if (FAPI) {
+                   window.API_callback = function() {
+                       console.log(arguments);
+                       document.getElementById("log").textContent += getCurrentTime() +  " [WEB] " + JSON.stringify(arguments); + "\n";
+                   };
+                   FAPI.init();
+                   document.getElementsById('fapi')[0].style.display='block';
+                }
 
+            });
+        </script>
+    </head>
     <body>
         <div class="section">
             <div class="additional-params">
@@ -22,15 +35,31 @@
             <div class="main-params">
                 <div class="param">
                     <span class="param-name">
-                        <button type="submit" id="ads-enabled" onClick="isAdsEnabled()">OKApp.isAdsEnabled</button><br/>
+                        <button type="submit" id="fapi-ads-enabled" onClick="fapiIsAdsEnabled()">FAPI.UI.isNativeAdSupported</button><br/>
                     </span>
                 </div>
                 <div class="param">
                     <span class="param-name">
-                        <button type="submit" id="request-ads-action" onClick="requestAds()">OKApp.requestAds</button><br/>
+                        <button type="submit" id="fapi-request-ads-action" onClick="fapiRequestAds()">FAPI.UI.requestNativeAd</button><br/>
                     </span>
                 </div>
             </div>
+        </div>
+        <div>
+            <div class="section" id="fapi_ads">
+                <div class="main-params">
+                    <div class="param">
+                        <span class="param-name">
+                            <button type="submit" id="ads-enabled" onClick="isAdsEnabled()">OKApp.isAdsEnabled</button><br/>
+                        </span>
+                    </div>
+                    <div class="param">
+                        <span class="param-name">
+                            <button type="submit" id="request-ads-action" onClick="requestAds()">OKApp.requestAds</button><br/>
+                        </span>
+                </div>
+            </div>
+        </div>
         </div>
         <div class="section">
             <div class="main-params">

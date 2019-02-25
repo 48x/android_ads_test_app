@@ -18,6 +18,22 @@ function requestAds() {
     }
 }
 
+function fapiIsAdsEnabled() {
+    result = FAPI.UI.isNativeAdSupported();
+    document.getElementById("chatlog").textContent += getCurrentTime() + " [fapiIsAdsEnalbed] " + "[" + result + "]\n";
+    if (isAlertEnabled()) {
+        alert("[fapIsAdsEnalbed] " + "[" + result + "]")
+    }
+}
+
+function fapiRequestAds() {
+    result = FAPI.UI.requestNativeAd();
+    document.getElementById("chatlog").textContent += getCurrentTime() + " [fapiRequestAds] " + "[" + result + "]\n";
+    if (isAlertEnabled()) {
+        alert("[fapiRequestAds] " + "[" + result + "]")
+    }
+}
+
 function callbackForAds(adState) {
     document.getElementById("chatlog").textContent += getCurrentTime() + " [adState] " + "[" + adState + "]\n";
     if (isAlertEnabled()) {
