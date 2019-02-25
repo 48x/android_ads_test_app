@@ -10,7 +10,14 @@
         <link rel="stylesheet" type="text/css" href="static/css/main.css"/>
         <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function () {
-                if (FAPI && FAPI.UI.requestNativeAd && FAPI.UI.isNativeAdSupported && OKSDK.Util.isLaunchedFromOKApp()) {
+
+                if (!OKSDK.Util.isLaunchedFromOKApp()) {
+                    document.getElementById('feature-disabled').style.display='block';
+                } else {
+                    document.getElementById('content-container').style.display='block';
+                }
+
+                if (FAPI && FAPI.UI.requestNativeAd && FAPI.UI.isNativeAdSupported) {
                    window.API_callback = function() {
                        console.log(arguments);
                        document.getElementById("chatlog").textContent += getCurrentTime() +  " [fapiMessage] " + JSON.stringify(arguments); + "\n";
@@ -22,6 +29,8 @@
         </script>
     </head>
     <body>
+    <div class="warning" id="feature-disabled" style="display: none">Данный вид рекламы доступен только для приложений, запущенных в Android-приложении Одноклассников</div>
+    <div id="content-container" style="display: none">
         <div class="section">
             <div class="additional-params">
                 <div class="param-boolean">
@@ -76,5 +85,6 @@
                 <textarea id="chatlog" readonly rows="10"></textarea><br/>
             </div>
         </div>
+    </div>
     </body>
 </html>
