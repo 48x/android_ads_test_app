@@ -66,9 +66,12 @@
 }
 
 .section-title {
-    border-bottom: 1px solid #5f5f5f;
     text-align: center;
     color: #5f5f5f;
     font-size: 12px;
     margin-bottom: 7px;
+}
+
+hr {
+    clear: both;
 }
