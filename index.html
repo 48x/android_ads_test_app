@@ -18,9 +18,9 @@
                 }
 
                 if (FAPI && FAPI.UI.requestNativeAd && FAPI.UI.isNativeAdSupported) {
-                   window.API_callback = function() {
+                   window.API_callback = function(method, result, data) {
                        console.log(arguments);
-                       document.getElementById("chatlog").textContent += getCurrentTime() +  " [fapiMessage] " + JSON.stringify(arguments); + "\n";
+                       document.getElementById("chatlog").textContent += getCurrentTime() +  " [fapiMessage] " + "method=" + method + ", result=" + result + ", data=" + data + "\n";
                    };
                    FAPI.init();
                    document.getElementById('fapi-ads').style.display='block';
