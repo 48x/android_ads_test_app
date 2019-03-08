@@ -52,6 +52,7 @@
     margin-left: 5%;
     margin-right: 5%;
     border-bottom: 1px solid silver;
+    clear: both;
 }
 
 .param > textarea {
