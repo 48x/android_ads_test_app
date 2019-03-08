@@ -34,6 +34,22 @@ function fapiRequestAds() {
     }
 }
 
+function requestManualAds() {
+    result = OKApp.requestManualAds("callbackForAds");
+    document.getElementById("chatlog").textContent += getCurrentTime() + " [requestManualAds] " + "[" + result + "]\n";
+    if (isAlertEnabled()) {
+        alert("[requestManualAds] " + "[" + result + "]");
+    }
+}
+
+function showManualAd() {
+    result = OKApp.showManualAd();
+    document.getElementById("chatlog").textContent += getCurrentTime() + " [showManualAd] " + "[" + result + "]\n";
+    if (isAlertEnabled()) {
+        alert("[showManualAd] " + "[" + result + "]");
+    }
+}
+
 function callbackForAds(adState) {
     document.getElementById("chatlog").textContent += getCurrentTime() + " [adState] " + "[" + adState + "]\n";
     if (isAlertEnabled()) {

@@ -17,6 +17,7 @@
                     document.getElementById('content-container').style.display='block';
                 }
 
+
                 if (FAPI && FAPI.UI.requestNativeAd && FAPI.UI.isNativeAdSupported) {
                    window.API_callback = function(method, result, data) {
                        console.log(arguments);
@@ -24,6 +25,10 @@
                    };
                    FAPI.init();
                    document.getElementById('fapi-ads').style.display='block';
+                }
+
+                if (OKSDK && OKSDK.requestManualAds && OKSDK.showLoadedAd) {
+                    document.getElementById('rewarded-ads').style.display='block';
                 }
             });
         </script>
@@ -70,6 +75,23 @@
                 <div class="param">
                     <span class="param-name">
                         <button type="submit" id="request-ads-action" onClick="requestAds()">OKApp.requestAds</button><br/>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="rewarded-ads" style="padding-top: 0px;">
+            <div class="linebreak"></div>
+            <div class="section-title">Rewarded ads</div>
+            <div class="linebreak"></div>
+            <div class="main-params">
+                <div class="param">
+                    <span class="param-name">
+                        <button type="submit" id="request-rewarded-ad" onClick="requestManualAds()">OKApp.requestManualAds</button><br/>
+                    </span>
+                </div>
+                <div class="param">
+                    <span class="param-name">
+                        <button type="submit" id="show-prepared-ad" onClick="showLoadedAd()">OKApp.showLoadedAd</button><br/>
                     </span>
                 </div>
             </div>
