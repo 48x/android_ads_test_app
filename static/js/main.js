@@ -43,10 +43,10 @@ function requestManualAds() {
 }
 
 function showManualAd() {
-    result = OKApp.showManualAd();
-    document.getElementById("chatlog").textContent += getCurrentTime() + " [showManualAd] " + "[" + result + "]\n";
+    result = OKApp.showLoadedAd();
+    document.getElementById("chatlog").textContent += getCurrentTime() + " [showLoadedAd] " + "[" + result + "]\n";
     if (isAlertEnabled()) {
-        alert("[showManualAd] " + "[" + result + "]");
+        alert("[showLoadedAd] " + "[" + result + "]");
     }
 }
 
