@@ -42,7 +42,7 @@ function requestManualAds() {
     }
 }
 
-function showManualAd() {
+function showLoadedAd() {
     result = OKApp.showLoadedAd();
     document.getElementById("chatlog").textContent += getCurrentTime() + " [showLoadedAd] " + "[" + result + "]\n";
     if (isAlertEnabled()) {
