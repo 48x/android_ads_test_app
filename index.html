@@ -27,7 +27,7 @@
                    document.getElementById('fapi-ads').style.display='block';
                 }
 
-                if (OKSDK && OKSDK.requestManualAds && OKSDK.showLoadedAd) {
+                if (FAPI && FAPI.requestManualAd && FAPI.showLoadedAd) {
                     document.getElementById('rewarded-ads').style.display='block';
                 }
             });
@@ -83,12 +83,12 @@
             <div class="main-params">
                 <div class="param">
                     <span class="param-name">
-                        <button type="submit" id="request-rewarded-ad" onClick="requestManualAds()">OKApp.requestManualAds</button><br/>
+                        <button type="submit" id="request-rewarded-ad" onClick="requestManualAds()">FAPI.requestManualAd</button><br/>
                     </span>
                 </div>
                 <div class="param">
                     <span class="param-name">
-                        <button type="submit" id="show-prepared-ad" onClick="showLoadedAd()">OKApp.showLoadedAd</button><br/>
+                        <button type="submit" id="show-prepared-ad" onClick="showLoadedAd()">FAPI.showLoadedAd</button><br/>
                     </span>
                 </div>
             </div>

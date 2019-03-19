@@ -35,7 +35,7 @@ function fapiRequestAds() {
 }
 
 function requestManualAds() {
-    result = OKApp.requestManualAds("callbackForAds");
+    result = FAPI.requestManualAd();
     document.getElementById("chatlog").textContent += getCurrentTime() + " [requestManualAds] " + "[" + result + "]\n";
     if (isAlertEnabled()) {
         alert("[requestManualAds] " + "[" + result + "]");
@@ -43,7 +43,7 @@ function requestManualAds() {
 }
 
 function showLoadedAd() {
-    result = OKApp.showLoadedAd();
+    result = FAPI.showLoadedAd();
     document.getElementById("chatlog").textContent += getCurrentTime() + " [showLoadedAd] " + "[" + result + "]\n";
     if (isAlertEnabled()) {
         alert("[showLoadedAd] " + "[" + result + "]");
