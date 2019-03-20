@@ -47,7 +47,7 @@
         </div>
         <div class="section" id="fapi-ads" style="display: none;">
             <div class="linebreak"></div>
-            <div class="section-title">Реклама для игр, открываемых в iframe</div>
+            <div class="section-title">Реклама для игр, открываемых в iframe (interstitial)</div>
             <div class="linebreak"></div>
             <div class="main-params">
                 <div class="param">
@@ -59,6 +59,23 @@
                     <span class="param-name">
                         <button type="submit" id="fapi-request-ads-action" onClick="fapiRequestAds()">FAPI.UI.requestNativeAd</button><br/>
                     </span>
+                </div>
+            </div>
+            <div class="linebreak"></div>
+            <div class="section-title">Реклама для игр, открываемых в iframe (rewarded)</div>
+            <div class="linebreak"></div>
+            <div class="section" id="rewarded-ads" style="padding-top: 0px;">
+                <div class="main-params">
+                    <div class="param">
+                        <span class="param-name">
+                            <button type="submit" id="request-rewarded-ad" onClick="requestManualAds()">FAPI.UI.requestManualAd</button><br/>
+                        </span>
+                    </div>
+                    <div class="param">
+                        <span class="param-name">
+                            <button type="submit" id="show-prepared-ad" onClick="showLoadedAd()">FAPI.UI.showLoadedAd</button><br/>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="linebreak"></div>
@@ -79,20 +96,7 @@
                 </div>
             </div>
         </div>
-        <div class="section" id="rewarded-ads" style="padding-top: 0px;">
-            <div class="main-params">
-                <div class="param">
-                    <span class="param-name">
-                        <button type="submit" id="request-rewarded-ad" onClick="requestManualAds()">FAPI.requestManualAd</button><br/>
-                    </span>
-                </div>
-                <div class="param">
-                    <span class="param-name">
-                        <button type="submit" id="show-prepared-ad" onClick="showLoadedAd()">FAPI.showLoadedAd</button><br/>
-                    </span>
-                </div>
-            </div>
-        </div>
+
         <div class="section">
             <div class="main-params">
                 <div class="param">
