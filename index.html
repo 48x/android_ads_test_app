@@ -18,7 +18,7 @@
                 }
 
 
-                if (FAPI && FAPI.UI.requestNativeAd && FAPI.UI.isNativeAdSupported) {
+                if (FAPI && FAPI.UI.requestNativeAd && FAPI.UI.isNativeAdSupported && OKSDK && OKSDK.requestManualAds && OKSDK.showLoadedAd) {
                    window.API_callback = function(method, result, data) {
                        console.log(arguments);
                        document.getElementById("chatlog").textContent += getCurrentTime() +  " [fapiMessage] " + "method=" + method + ", result=" + result + ", data=" + data + "\n";
