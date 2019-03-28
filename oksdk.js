@@ -122,7 +122,7 @@
             if (i > 0) argStr += '$';
             if (arg != null) argStr += encodeURIComponent(String(arg));
         }
-        parent.postMessage("__FAPI__" + argStr, state.mobServer);
+        parent.postMessage("__FAPI__" + argStr, "https://m.ok.ru/");
     }
 
     // ---------------------------------------------------------------------------------------------------
