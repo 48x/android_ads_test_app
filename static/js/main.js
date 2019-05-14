@@ -65,3 +65,7 @@ function getCurrentTime() {
     var now = new Date();
     return ("[" + new Date().toLocaleString() + "]");
 }
+
+function customBackHandler() {
+    window.alert("customBackHandler invoked successfully");
+}
